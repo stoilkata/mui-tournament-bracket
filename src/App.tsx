@@ -153,7 +153,7 @@ function App() {
                   justifyContent: "space-around",
                 }}
               >
-                {x.matches.map((y, i) => (
+                {x.matches.map((y) => (
                   <Box
                     sx={{
                       display: "flex",
