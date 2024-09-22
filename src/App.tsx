@@ -11,48 +11,56 @@ function App() {
           playertwo: "James Brown",
           score1: 1,
           score2: 3,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Emily Davis",
           playertwo: "Sophia Johnson",
           score1: 4,
           score2: 2,
+          isFirstPlayerWinner: true,
         },
         {
           playerone: "Michael Lee",
           playertwo: "David Kim",
           score1: 3,
           score2: 5,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Anna Wilson",
           playertwo: "Grace Martinez",
           score1: 6,
           score2: 7,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Chris Evans",
           playertwo: "Ryan Moore",
           score1: 3,
           score2: 0,
+          isFirstPlayerWinner: true,
         },
         {
           playerone: "Daniel Clark",
           playertwo: "Matthew Hall",
           score1: 5,
           score2: 6,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Olivia Lewis",
           playertwo: "Liam Walker",
           score1: 1,
           score2: 4,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Zoe Harris",
           playertwo: "Ethan Young",
           score1: 3,
           score2: 3,
+          isFirstPlayerWinner: false, // It's a tie
         },
       ],
     },
@@ -64,24 +72,28 @@ function App() {
           playertwo: "Emily Davis",
           score1: 2,
           score2: 4,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "David Kim",
           playertwo: "Anna Wilson",
           score1: 1,
           score2: 5,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Chris Evans",
           playertwo: "Matthew Hall",
           score1: 3,
           score2: 1,
+          isFirstPlayerWinner: true,
         },
         {
           playerone: "Liam Walker",
           playertwo: "Zoe Harris",
           score1: 4,
           score2: 4,
+          isFirstPlayerWinner: false, // It's a tie
         },
       ],
     },
@@ -93,12 +105,14 @@ function App() {
           playertwo: "Anna Wilson",
           score1: 3,
           score2: 6,
+          isFirstPlayerWinner: false,
         },
         {
           playerone: "Chris Evans",
           playertwo: "Liam Walker",
           score1: 5,
           score2: 4,
+          isFirstPlayerWinner: true,
         },
       ],
     },
@@ -110,6 +124,7 @@ function App() {
           playertwo: "Chris Evans",
           score1: 2,
           score2: 3,
+          isFirstPlayerWinner: false,
         },
       ],
     },
@@ -166,7 +181,6 @@ function App() {
                       sx={{
                         display: "flex",
                         flexDirection: "column",
-                        border: "2px solid green",
                         justifyContent: "center",
                         width: "250px",
                       }}
@@ -178,6 +192,9 @@ function App() {
                           justifyContent: "space-between",
                           border: "2px solid green",
                           gap: 5,
+                          backgroundColor: y.isFirstPlayerWinner
+                            ? "#3d3838"
+                            : "",
                           padding: 2,
                         }}
                       >
@@ -190,7 +207,12 @@ function App() {
                           display: "flex",
                           flexDirection: "row",
                           justifyContent: "space-between",
+                          border: "2px solid green",
+                          borderTop: "none",
                           gap: 5,
+                          backgroundColor: !y.isFirstPlayerWinner
+                            ? "#3d3838"
+                            : "",
                           padding: 2,
                         }}
                       >
