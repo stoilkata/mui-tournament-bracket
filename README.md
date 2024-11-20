@@ -1,3 +1,3 @@
 # Tournament bracket visualization
 
-https://sgkalugerov.github.io/mui-tournament-bracket/
+https://stoilkata.github.io/mui-tournament-bracket/
